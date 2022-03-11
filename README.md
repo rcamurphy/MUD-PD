@@ -79,7 +79,7 @@ System specifications used for development and testing:
      ```sh
      shell> sudo apt-get install git
      ```
-1. Python 3.8.4+
+1. Python 3.8.4-3.9.10:
 
    * Check version
      ```sh
@@ -90,16 +90,16 @@ System specifications used for development and testing:
      You can also try the following commands
      * macOS:
      ```sh
-     shell> brew install python3
+     brew install python3
      ```
 
      * Linux
      ```sh
-     shell> sudo apt-get install python3.8
+     sudo apt-get install python3.8
      ```
      or
      ```sh
-     shell> sudo apt-get install python3.9
+     sudo apt-get install python3.9
      ```
 
 2. MySQL
@@ -227,6 +227,8 @@ necessarily between both</li>
     a. On Ubuntu, scaling may not work correctly for some buttons. Try a different scale percentage.
    
     b. On macOS, Dark Mode may modify the colors of some text and background. Try selecting Light Mode.
+    
+    c. On macOS, Python version 3.10+ causes the background colors of the tool to go dark. Try downgrading to Python version 3.9.
 
 ## Contact Us
 These programs were developed by Paul Watrobski and Joshua Klosterman. Questions and bug reports may be directed to
