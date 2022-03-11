@@ -171,9 +171,9 @@ System specifications used for development and testing:
    ```
 
 2. Install muddy: (for MUD file generation)
-   * Follow instructions at: https://github.com/upaulnight/muddy
+   * Follow instructions at: https://github.com/usnistgov/muddy
    * IMPORTANT:
-      * Latest verified compatible commit: c498ea9b159c5881ffbaacc2e4064c2cf9081775 (2021-03-12)
+      * Latest verified compatible commit: 1434c380cdd49077b273c9aafdb2c7e0ef733636 (2021-04-05)
       * Verified to work when muddy is installed within the root directory of the MUD-PD repository
 
 ## Running MUD-PD
@@ -216,7 +216,7 @@ necessarily between both</li>
 
 1. Functional Issues:
    
-    a. Run `shell> pip3 install -r requirements.txt`
+    a. Run `pip3 install -r requirements.txt`
    
     b. Verify that all prerequisite versions have been met (see "Prerequisites and Use" above)
    
@@ -227,6 +227,21 @@ necessarily between both</li>
     a. On Ubuntu, scaling may not work correctly for some buttons. Try a different scale percentage.
    
     b. On macOS, Dark Mode may modify the colors of some text and background. Try selecting Light Mode.
+
+## Recommendations
+
+1. When importing packet captures (pcap files), minimize the size of the capture to 3MB or smaller. If your file exceeds 3MB, split your file into smaller sizes and import them individually.  
+
+## Q&A
+
+<dl>
+1. <dt>Is there a way to group the rules so that they do not include all ephemeral ports that a device uses in a communication?</dt>
+<dd>For the tool, you would change the source port number to "any"</dd>
+  
+2. <dt>Are the MUD rules already parsed to openflow/firewall-like rules somewhere in the process?</dt>
+<dd>This is not part of the MUD-PD tool. Normally, you would need the firewall to ingest the MUD file and translate it to firewall rules. In the context of MUD, that'd be the function of the "MUD Controller"</dd>
+  
+</dl>
 
 ## Contact Us
 These programs were developed by Paul Watrobski and Joshua Klosterman. Questions and bug reports may be directed to
